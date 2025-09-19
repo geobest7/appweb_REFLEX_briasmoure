@@ -12,7 +12,7 @@ pass
 
 def index() -> rx.Component:
     # Welcome Page (Index)
-    return rx.text("hello World")
+    return rx.text("hello World", color="orange")
 
 
 app = rx.App()
