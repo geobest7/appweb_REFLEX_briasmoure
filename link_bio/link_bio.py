@@ -1,7 +1,8 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
-
+from link_bio.components.navbar import navbar
+from link_bio.views.header.header import header
 from rxconfig import config
 
 
@@ -11,9 +12,13 @@ pass
 
 
 def index() -> rx.Component:
-    # Welcome Page (Index)
-    return rx.text("hello World", color="orange")
+    return rx.vstack(
+        navbar(),
+        header(),
+        )
+    
 
 
 app = rx.App()
 app.add_page(index)
+
