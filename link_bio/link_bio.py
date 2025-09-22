@@ -2,9 +2,10 @@
 
 import reflex as rx
 from link_bio.components.navbar import navbar
+from link_bio.components.footer import footer
 from link_bio.views.header.header import header
 from link_bio.views.links.links import links
-from rxconfig import config
+
 
 
 class State(rx.State):
@@ -17,6 +18,7 @@ def index() -> rx.Component:
         navbar(),
         header(),
         links(),
+        footer(),
         spacing="6",            
         align="center",       
         width="100%"
