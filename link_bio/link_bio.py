@@ -5,6 +5,7 @@ from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 from link_bio.views.header.header import header
 from link_bio.views.links.links import links
+import link_bio.styles.styles as styles
 
 
 
@@ -14,15 +15,23 @@ pass
 
 
 def index() -> rx.Component:
-    return rx.vstack(
+    return rx.box(
         navbar(),
-        header(),
-        links(),
-        footer(),
-        spacing="6",            
-        align="center",       
-        width="100%"
-        )
+        rx.center(
+            rx.vstack(
+                header(),
+                links(),
+                max_width=styles.MAX_WIDTH,
+                width="100%",
+                padding="20px",
+                margin_y=styles.Spacer.BIG.value
+            )
+        ),
+        footer()
+    )
+
+
+
     
 
 
