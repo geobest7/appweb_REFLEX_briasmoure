@@ -11,6 +11,6 @@ def navbar() -> rx.Component:
         position="sticky",
         bg="blue",
         padding_x="16px",
-        adding_y="8px",
-        z_index="999"
+        padding_y="8px",
+        z_index="999",  
     )

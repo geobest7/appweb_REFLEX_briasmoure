@@ -2,8 +2,11 @@
 
 import reflex as rx
 from link_bio.components.navbar import navbar
+from link_bio.components.footer import footer
 from link_bio.views.header.header import header
-from rxconfig import config
+from link_bio.views.links.links import links
+import link_bio.styles.styles as styles
+
 
 
 class State(rx.State):
@@ -12,10 +15,24 @@ pass
 
 
 def index() -> rx.Component:
-    return rx.vstack(
+    return rx.box(
         navbar(),
-        header(),
-        )
+        rx.center(
+            rx.vstack(
+                header(),
+                links(),
+                max_width=styles.MAX_WIDTH,
+                width="100%",
+                padding="20px",
+                margin_y=styles.Spacer.BIG.value,
+                align="center"
+            )
+        ),
+        footer()
+    )
+
+
+
     
 
 
