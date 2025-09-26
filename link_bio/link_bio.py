@@ -24,7 +24,8 @@ def index() -> rx.Component:
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 padding="20px",
-                margin_y=styles.Spacer.BIG.value
+                margin_y=styles.Spacer.BIG.value,
+                align="center"
             )
         ),
         footer()
